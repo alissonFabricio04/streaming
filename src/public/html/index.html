@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streaming</title>
+</head>
+
+<body>
+  <main>
+    <div controls id="player"></div>
+  </main>
+
+  <script>
+    const networkInfo = navigator.connection
+    const downloadRate = networkInfo?.downlink ?? 1
+
+    const tagName = 'video'
+    const type = `${tagName}/mp4`
+    const player = document.getElementById('player')
+
+    player.innerHTML = `
+      <${tagName} controls>
+        <source src="/api/streaming?download_rate=${downloadRate}" type=${type}>
+        Your browser does not support the ${tagName} tag.
+      </${tagName}>
+    `
+  </script>
+</body>
+
+</html>

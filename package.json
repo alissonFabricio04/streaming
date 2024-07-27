@@ -1,0 +1,26 @@
+{
+  "name": "streaming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start:express": "node dist/app-express.js",
+    "start:native": "node dist/app-native.js",
+    "build": "tsc",
+    "dev:express": "npx ts-node-dev --respawn src/app-express.ts",
+    "dev:native": "npx ts-node-dev --respawn src/app-native.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
