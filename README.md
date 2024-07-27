@@ -19,7 +19,7 @@ Este é um projeto simples de streaming de mídia utilizando Node.js. O projeto 
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/usuario/streaming.git
+    git remote add origin https://github.com/alissonFabricio04/streaming.git
     cd streaming
     ```
 
